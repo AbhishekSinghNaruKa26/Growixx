@@ -46,6 +46,7 @@ const scroll=ScrollReveal(
         let duration=Math.floor(interval / endValue);
         let counter = setInterval(function (){
             startValue += 1;
+            reset:true,
             valueDisplays.textContent = startValue;
             if(startValue == endValue){
                 clearInterval(counter);
