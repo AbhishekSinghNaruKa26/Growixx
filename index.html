@@ -7,107 +7,107 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link
     rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="index.css">
     <script src="https://unpkg.com/scrollreveal@4"></script>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+
 
   </head>
-  <body class="bg-[#e5e4e2] pt-[65px] ">
+  <body class="bg-[#e5e4e2]   ">
     <header class="">
-        <nav class=" flex h-[65px] items-center top-0 z-9999 justify-between w-[100%] mx-auto fixed   bg-white">
+        <nav class="flex justify-between  md:z-9999  md:fixed md:top-0 items-center px-10 bg-white w-[100%] h-[65px] m-auto ">
             <div>
-                <img class="h-[40px] w-[180px] pl-16" src="https://growixx.com/assets/img/pg1.png" alt="">
+                <img class="h-[40px] w-[180px]  pl-" src="https://growixx.com/assets/img/pg1.png" alt="">
             </div>
-            <div class="items-center hidden md:flex w-[60%] ">
-                <ul class="flex gap-13  ">
+            <div class="nav-links md:static md:min-h-fit   absolute bg-white min-h-[60vh] left-0 top-[-100%] md:w-auto w-full flex items-center px-5" >
+                <ul class="flex  md:flex-row flex-col md:items-center md:gap-[4vw] gap-8  ">
                     <li><a class="hover:text-[#34a853] font-bold" href="#Home">Home</a></li>
                     <li><a class="hover:text-[#34a853] font-bold"href="#About">About</a></li>
                     <li><a class="hover:text-[#34a853] font-bold" href="#Services">Services</a></li>
                     <li><a class="hover:text-[#34a853] font-bold" href="#clients">Clients</a></li>
                     <li><a class="hover:text-[#34a853] font-bold" href="#portfolio">portfolio</a></li>
                     <li><a class="hover:text-[#34a853] font-bold"href="#contact">Contact us</a></li>
-                    
-                </ul>
+                    </ul>
             </div>
-            <button class="p-3 md:hidden " onclick="handleMenu()">
-                <i class="fa-solid fa-bars"></i>
-            </button>
-           <div id="nav-dialog" class="fixed bg-white inset-0 p-3  md:hidden  ">
-                <div id="nav-bar"class="flex justify-between">
-                    <img class="h-[80px] w-[160px]" src="https://growixx.com/assets/img/pg1.png" alt="">
-                    <button class="p-3 md:hidden" onclick="handleMenu()">
-                        <i class="fa-solid fa-x"></i>   
-                    </button>
-                </div>
-                <div class="mt-6">
-                    <a href="#" class="font-medium m-3 p-3 hover:bg-gray-100 block rounded-lg">Home</a><hr>
-                    <a href="#" class="font-medium m-3 p-3 hover:bg-gray-100 block rounded-lg">About</a><hr>
-                    <a href="#" class="font-medium m-3 p-3 hover:bg-gray-100 block rounded-lg">Services</a><hr>
-                    <a href="#" class="font-medium m-3 p-3 hover:bg-gray-100 block rounded-lg">Clients</a><hr>
-                    <a href="#" class="font-medium m-3 p-3 hover:bg-gray-100 block rounded-lg">portfolio</a><hr>
-                    <a href="#" class="font-medium m-3 p-3 hover:bg-gray-100 block rounded-lg">Contact</a>
-                </div>
-            </div>        
-        </nav>
-    </header><hr>
+            <div class="flex items-center gap-6  ">
 
-    <main class=" mt-16 ">
+                <button class=" cursor-pointer bg-[#34a853] text-white px-5 rounded-3xl py-2"  ><a href="http://127.0.0.1:8080/login-register/join.html"> Join As Bussniess </a> </button>
+
+                <button class=" cursor-pointer bg-[#34a853] text-white px-5 rounded-3xl py-2"  ><a href="http://localhost:8080/login-register/login.html">  Sign In </a> </button>
+                <ion-icon onclick="onToggleMenu(this)"  name="menu" class="text-2xl md:hidden cursor-pointer"></ion-icon>
+            </div>
+
+
+            
+            
+     
+        </nav>
+    </header>
+
+    <main class=" md:mt-16 pt-9 ">
         <section class="Home  h-[100vh]" id="Home">
-        <div class="bg-[#00000099] bg-[url(img3.jpg)] bg-blend-darken  -translate-y-16 h-[560px]  bg-cover items-center justify-center   ">
-                <h1 class="text-[48px] h-[350px] -translate-y-16 text-white font-bold p-30 animate__animated animate__zoomIn animate__delay-1s">Improve Your Business Growth with <br>Expert Digital Marketing Solutions in <br> Rajasthan</h1>
+        <div class="bg-[url(https://growixx.com/assets/img/back-view-businessman-looking-skyscrapers-against-cloudy-sky-background_781958-645.avif)] -translate-y-10 md:bg-[url(img3.jpg)] bg-[#00000099] bg-blend-darken bg-cover  h-[560px]  bg-cover items-center justify-center   ">
+                <h1 class="text-[28px] md:text-[48px] h-[350px] -translate-y-16 text-white font-bold p-30 animate__animated animate__zoomIn animate__delay-1s">Improve Your Business Growth with <br>Expert Digital Marketing Solutions in <br> Rajasthan</h1>
             <h6 class="  text-[16px] pl-[123px] -translate-y-10 text-white font-bold animate__animated animate__slideInLeft animate__delay-1s animate__slower	4s animate__infinite infinite ">Transforming Content into Customers with Proven Digital Marketing Strategies
             </h6>
             <button class="  bg-[#34A853] hover:bg-transparent hover:border-3 border-white -translate-y-7 rounded-md ml-[123px] text-[24px] font-bold mt-[25px] text-white font-bold h-[60px] w-[218px] ">Get Started</button>
+            
         </div>
+
+        
+
     </section>
        
 
-        </div>
+    <!--login  & registration form -->
+    
 
 <!--Pragraph part 1-->
 <section class="About h-[150vh]" id="About">
-<div class=" flex  ">
-        <div class="paragraph1 mx-16 h-[645px] w-[520px]  mt-[80px]   ">
-            <div class="text-transfer">
-                <h1 class="h-[40px] text-[34px] font-bold ">Who We Are ?</h1>
-                <p class="font-bold pt-[50px] text-black"> At Growix, we specialize in building brands that resonate and convert. From digital marketing to video production, we deliver impactful solutions that drive results. Our goal is simple – driving quality leads and boosting sales for every business. Let’s turn your vision into success, one lead at a time!</p>
+<div class=" md:flex  ">
+        <div class="paragraph1 h-[520px] mx-28 mt-0 md:mx-16 md:h-[645px] w-[520px]  md:mt-[80px]   ">
+            <div class="text-transfer ">
+                <h1 class="flex justify-center  h-[40px] text-[34px] font-bold ">Who We Are ?</h1>
+                <p class=" font-bold pt-[50px] text-black"> At Growix, we specialize in building brands that resonate and convert. From digital marketing to video production, we deliver impactful solutions that drive results. Our goal is simple – driving quality leads and boosting sales for every business. Let’s turn your vision into success, one lead at a time!</p>
             </div>
            <div class="mt-[50px] text-transfer">
-            <h1 class="h-[40px] text-[34px] font-bold">Our Core Values</h1>
+            <h1 class="flex justify-center h-[40px] text-[34px] font-bold">Our Core Values</h1>
             <p class="font-bold pt-[50px] text-black">Growix Technologies comprises of a collective team of dedicated team of creatives who are ready to implement your idea into reality We use the latest set of market-available technologies into making your dreams come true in the digital space</p>
            </div>
            </div>
            <!--Pragraph part 2-->
 
-           <div class="grid grid-cols-2 w-[770px] h-[705px] gap-4 mx-6 mt-[100px]">
-            <div class="text-transfer"> 
-                <i class="fa-regular fa-images text-[#34a853] "></i>
-                <h1 class=" h-[24px] text-[20px] font-bold">Experienced & Friendly Team </h1>
-                <p class="font-bold pt-[25px] text-[#848484]">Our team has the experience to drive results, but we also value building strong relationships with our clients. We're approachable, easy to work with, and dedicated to helping your business succeed.
+           <div class=" mx-20 md:grid grid-cols-2 md:w-[770px] h-[705px] gap-4 md:mx-6 md:mt-[100px] mt-10">
+            <div class="text-transfer  pb-5 "> 
+                <i class="fa-regular fa-images  mx-64 md:mx-0  text-[30px] text-[#34a853] "></i>
+                <h1 class="ml-32 md:ml-1 h-[24px] text-[20px] font-bold">Experienced & Friendly Team </h1>
+                <p class="ml-7 font-bold pt-[25px] text-[#848484]">Our team has the experience to drive results, but we also value building strong relationships with our clients. We're approachable, easy to work with, and dedicated to helping your business succeed.
                 </p>
             </div>
-            <div class="text2">
-                <i class="fa-solid fa-receipt text-[#34a853]"></i>
-                <h1 class=" h-[24px] text-[20px] font-bold">Focused on Your Success
+            <div class="text2 pb-5 ">
+                <i class="fa-solid fa-receipt mx-64 md:mx-0  text-[30px] text-[#34a853]"></i>
+                <h1 class="ml-32 md:ml-1 h-[24px] text-[20px] font-bold">Focused on Your Success
                 </h1>
                 <p class="font-bold pt-[25px] text-[#848484]">We focus on what matters most to you: more leads and higher sales. Our strategies are designed to help you grow and achieve real, measurable results.
                 </p>
             </div>
-            <div class="text-transfer">
-                <i class="fa-solid fa-cube text-[#34a853]"></i>
-                <h1 class=" h-[24px] text-[20px] font-bold">Tailored Solutions
+            <div class="text-transfer pb-5">
+                <i class="fa-solid fa-cube mx-64 md:mx-0  text-[30px] text-[#34a853]"></i>
+                <h1 class="ml-40 md:ml-1 h-[24px] text-[20px] font-bold">Tailored Solutions
                 </h1>
                 <p class="font-bold pt-[25px] text-[#848484]">Every business is different. That’s why we create custom marketing plans that are made to fit your unique needs and goals.
                 </p>
             </div>
-            <div class="text2">
-                <i class="fa-solid fa-shield text-[#34a853]"></i>
-                <h1 class=" h-[24px] text-[20px] font-bold">Transparent & Supportive
+            <div class="text2 pb-10">
+                <i class="fa-solid fa-shield  mx-64 md:mx-0  text-[30px] text-[#34a853]"></i>
+                <h1 class="ml-32 md:ml-1 h-[24px] text-[20px] font-bold">Transparent & Supportive
                 </h1>
                 <p class="font-bold pt-[25px] text-[#848484]">We believe in open communication. You’ll always know what we’re doing and how it’s benefiting your business. We’re here to support you every step of the way.
                 </p>
             </div>
-            <div class="text-transfer">
-                <i class="fa-solid fa-shield text-[#34a853]"></i>
-                <h1 class=" h-[24px] text-[20px] font-bold">Local Expertise in Chennai
+            <div class="text-transfer pb-5">
+                <i class="fa-solid fa-shield  mx-64 md:mx-0  text-[30px] text-[#34a853]"></i>
+                <h1 class="ml-32 md:ml-1 h-[24px] text-[20px] font-bold">Local Expertise in Chennai
                 </h1>
                 <p class="font-bold pt-[25px] text-[#848484]">As a Chennai-based agency, we understand the local market and know how to help businesses here succeed. Whether you’re targeting the local market or beyond, we have the expertise to help you grow. We’re grateful to work with incredible clients</p>
             </div>
@@ -117,13 +117,13 @@
 
         <!--Services-->
         <section class="Services h-[150vh]" id="Services">
-        <div class="services h-[700px] bg-black text-white mt-[190px] pt-7 justify-items-center">
+        <div class="services h-[700px] bg-black text-white mt-[550px] md:mt-[90px] pt-7 justify-items-center">
             <h2 class=" text-[20px] font-bold pt-[40px] border-b-4 border-[#34a853]">SERVICES</h2>
-            <p class="h-[30px] text-[15px] font-bold pt-[20px]">Explore Growix’s digital marketing services: social media, performance marketing, SEO, graphic design, and more in Chennai.
+            <p class="mx-2 ml-7 h-[30px] text-[15px] font-bold pt-[20px]">Explore Growix’s digital marketing services: social media, performance marketing, SEO, graphic design, and more in Chennai.
             </p>
 
             <!--8box-->
-            <div class="pt-10 flex grid grid-cols-4 gap-10 px-10 ">
+            <div class="pt-16 flex   grid grid-cols-4 gap-10 px-10 ">
                 <div class=" text-white h-[220px] w-[200px] text-transfer bg-[#444444] pt-10 justify-items-center items-center rounded-xl hover:my-rotate-y-180 cursor-pointer duration-1000 " >
                     <img  class="h-[94px] w-[94px] bg-cover" src="https://growixx.com/assets/img/icons/Digital Marketing.png" alt="">
                     <p class="pt-3 border-b-4 border-[#34a853]">Digital marketing</p>
@@ -163,7 +163,7 @@
 
     <!--count Section-->
 
-    <div class="mt-[100px] mb-[50px]  ">
+    <div class="mt-[0px] mb-[50px]  ">
         <div class="h-[200px] flex justify-between mx-[40px] lg:col-span-2 text-transfer" >
             
             <div class="w-[216px] h-[180px] rounded-[8px] bg-[] shadow-2xl ">
@@ -195,12 +195,12 @@
 
     <!--clients-->
     <section class="clients h-[100vh]" id="clients">
-    <div class="h-[430px] w-full mt-[100px] bg-black text-white mb-28 ">
+    <div class="h-[430px] w-full mt-[200px] bg-black text-white mb-28 ">
         <div class="font-bold text-[32px] flex justify-center pt-15  ">
              <h1 class="border-b-3 border-[#34a853]">Our Clients </h1>
             </div>
 
-        <div class="h-[160px] w-[700px] flex justify-center items-center mx-56 pt-20 gap-30 col-lg-4  col-sm-1 animate__animated animate__zoomIn animate__delay-1s animate__infinite infinite animate__slower ">
+        <div class="h-[160px] w-[700px] flex justify-center items-center mx-80 pt-20 gap-30 col-lg-4  col-sm-1 animate__animated animate__zoomIn animate__delay-1s animate__infinite infinite animate__slower ">
 
             <img class="h-[114px] w-[114px] border border-3-white" src="https://growixx.com/assets/img/techicons/12.jpg" alt="">
             <img class="h-[114px] w-[114px] border border-3-white" src="https://growixx.com/assets/img/techicons/9.jpg" alt="">
@@ -214,24 +214,44 @@
 
     <!--portfolio section-->
     <section class="portfolio h-[100vh]" id="portfolio">
-   <div class="w-full h-[px] flex justify-center ">
+   <div class="w-full h-[]  flex justify-center ">
     <div class="title w-[696px] h-[180px]">
-        <h2 class="flex justify-center text-[32px] font-bold pt-16 pb-5">PORTFOLIO</h2>
-        <P>We have a deep understanding of user habits and behaviors. We are committed to using fact-based knowledge and our unique brand of innovation to help you dominate the competition. Every project is customized for optimum visibility and audience response.</P>
+        <h2 class="flex justify-center text-[50px] font-bold pt-10 pb-5">PORTFOLIO</h2>
+        <P class="text-[20px] ">We have a deep understanding of user habits and behaviors. We are committed to using fact-based knowledge and our unique brand of innovation to help you dominate the competition. Every project is customized for optimum visibility and audience response.</P>
     </div>
    </div>
 
 
-   <div class="slide w-[696px] h-[324px]  ">
-    <div class="slide 1 h-[150px] w-[696px] flex justify-center pt-15 animate__animated animate__slideInLeft animate__delay-1s animate__slower	4s animate__infinite infinite">
-        <li class="h-[123px] w-[200px] flex gap-6 flex ">
-            
-                
-                <img src="https://growixx.com/assets/img/portfolio/portfolio6.png" alt="">
-                <img src="https://growixx.com/assets/img/portfolio/portfolio7.png" alt="">
-                <img src="https://growixx.com/assets/img/portfolio/portfolio8.png" alt="">
-          
-        </li>
+   <div class="slider pt-20 size-full  ">
+    <div class="slide-track  w-[300px] ">
+        <div class="slide ">
+        <img class="picture" src="https://growixx.com/assets/img/portfolio/portfolio6.png" alt="">
+        </div>
+        <div class="slide">
+        <img  class="picture" src="https://growixx.com/assets/img/portfolio/portfolio7.png" alt="">
+       </div>
+       <div class="slide">
+        <img class="picture"  src="https://growixx.com/assets/img/portfolio/portfolio8.png" alt="">
+      </div>
+      <div class="slide">
+        <img class="picture"  src="https://growixx.com/assets/img/portfolio/portfolio8.png" alt="">
+      </div>
+      <div class="slide">
+        <img class="picture"  src="https://growixx.com/assets/img/portfolio/portfolio8.png" alt="">
+      </div>
+      <div class="slide">
+        <img class="picture"  src="https://growixx.com/assets/img/portfolio/portfolio8.png" alt="">
+      </div>
+      <div class="slide">
+        <img class="picture"   src="https://growixx.com/assets/img/portfolio/portfolio8.png" alt="">
+      </div>
+      <div class="slide">
+        <img class="picture"   src="https://growixx.com/assets/img/portfolio/portfolio8.png" alt="">
+      </div>
+      <div class="slide">
+        <img class="picture"  src="https://growixx.com/assets/img/portfolio/portfolio8.png" alt="">
+      </div>
+              
     </div>
    </div>
    </section>
@@ -254,10 +274,10 @@
    <section class="contact h-[150vh]" id="contact">
    <div class="h-[200px] w-full pt-16 mb-24">
     <div class="title h-[58px] flex justify-center">
-        <span class="text-[32px] font-bold border-b-4 border-[#34a853] ">We Are Ready ! Are You ?</span>
+        <span class="text-[40px] font-bold flex justify-center border-b-4 border-[#34a853] ">We Are Ready ! Are You ?</span>
     </div>
-    <div class="h-[70px] w-[900px] mt-10 mx-32 line text-base/8 flex justify-center ">
-        <span>Unlock growth and elevate your brand with expert digital marketing, impactful content creation, engaging social media management, and stunning, conversion-focused web design—backed by a commitment to your success. <br>
+    <div class="h-[70px] w-[1000px] mt-10 mx-64 line text-base/8 flex justify-center ">
+        <span class="text-[20px]">Unlock growth and elevate your brand with expert digital marketing, impactful content creation, engaging social media management, and stunning, conversion-focused web design—backed by a commitment to your success. <br>
 
             Feel free to contact us over the phone, email, or contact form below to leverage all of the above for your business.</span>
     </div>
@@ -266,22 +286,22 @@
 
    <!--part2-->
 
-   <div class="main1 h-[460px] w-[960px] grid grid-cols-2 gap-40 mx-9 ">
+   <div class="main1 h-[460px] w-[960px] grid grid-cols-2 gap-100 mx-9 ">
     <div>
-        <div class=" info-box w-[456px] h-[182px] rounded-xl pt-10 m-[24px] shadow-2xl " >
-            <i class="fa-solid fa-location-dot px-[200px] text-[20px] text-[#34a853]"></i>
-            <h2 class="px-[150px] text-[20px] text-[#777777] font-bold">Our Address</h2>
-            <p class="px-10 text-[#777777]  ">Sector 4 Kudi Bhagtasni Housing Board Jodhpur Raj.</p>
+        <div class=" info-box w-[600px] h-[200px] rounded-3xl pt-12 m-[24px] shadow-2xl " >
+            <i class="fa-solid fa-location-dot pl-[300px] text-[20px] text-[#34a853]"></i>
+            <h2 class="pl-[250px] text-[20px] text-[#777777] font-bold">Our Address</h2>
+            <p class="px-28 text-[#777777]  ">Sector 4 Kudi Bhagtasni Housing Board Jodhpur Raj.</p>
         </div>
-        <div class="flex">
-        <div class="email-box h-[180px] w-[216px] shadow-2xl rounded-xl m-[24px] "> 
+        <div class="flex px-10">
+        <div class="email-box h-[200px] w-[216px] shadow-2xl pt-3 rounded-xl m-[24px] "> 
             <i class="fa-solid fa-envelope text-[20px] text-[#34a853] px-24 pt-10"></i>
             <h1 class="pl-20 text-[#777777] font-bold">Email Us </h1>
             <p class="text-[#777777] pl-2 pt-4">Growixxagency@Gmail.com</p>
 
         </div>
 
-        <div class="email-box h-[180px] w-[216px] shadow-2xl rounded-xl m-[24px] "> 
+        <div class="email-box h-[200px] w-[216px] shadow-2xl rounded-xl m-[24px] "> 
             <i class="fa-solid fa-phone text-[20px] text-[#34a853] px-24 pt-10 "></i>
             <h1 class="pl-20 text-[#777777] font-bold">Call Us</h1>
             <p class="text-[#777777] pl-10 pt-2">+91-7413940716 <br> +91-9784247815 <br> +91-9782351129 </p>
@@ -290,15 +310,15 @@
     </div>
     </div>
 
-    <div class="main2 h-[400px] w-[470px] mt-5 shadow-2xl rounded-3xl ">
+    <div class="main2 h-[450px] w-[600px] mt-5 shadow-2xl rounded-3xl ">
         <div class="pt-8 pl-5 grid grid-cols-2">
-            <input class="h-[42px] w-[186px] pl-5 rounded-xl bg-white" id="text"  type="text" placeholder="Your Name">
-            <input class="h-[42px] w-[186px] pl-5 rounded-xl bg-white" id="text"  type="text" placeholder="Your Email">
+            <input class="h-[42px] w-[250px] pl-5 rounded-xl bg-white" id="text"  type="text" placeholder="Your Name">
+            <input class="h-[42px] w-[250px] pl-5 rounded-xl bg-white" id="text"  type="text" placeholder="Your Email">
         </div>
 
         <div class="pt-8 pl-5 grid grid-cols-2">
-            <input class="h-[42px] w-[186px] pl-5 rounded-xl bg-white" id="text"  type="text" placeholder="Your Number">
-            <select class="h-[42px] w-[186px] bg-white"  name="Select Service" id="service">
+            <input class="h-[42px] w-[250px] pl-5 rounded-xl bg-white" id="text"  type="text" placeholder="Your Number">
+            <select class="h-[42px] w-[250px] bg-white"  name="Select Service" id="service">
                 <option value="Select">Select Service</option>
                 <option value="">Viedo production</option>
                 <option value="">Graphic Designing</option>
@@ -311,9 +331,9 @@
             </select>
         </div>
 
-        <textarea class="w-[400px] h-[130px] rounded-3xl bg-white ml-7 mt-7 pl-3" name="Message " placeholder="Message" id="Message"></textarea>
+        <textarea class="w-[540px] h-[130px] rounded-3xl bg-white ml-7 mt-7 pl-3" name="Message " placeholder="Message" id="Message"></textarea>
 
-        <button class="h-[44px] w-[170px] bg-[#34a853] text-white mx-36 mt-4 rounded-lg"   > Send Message</button>
+        <button class="h-[44px] w-[170px] mt-10 bg-[#34a853] text-white mx-55 mt-4 rounded-lg"   > Send Message</button>
 
     </div> 
    </div>
