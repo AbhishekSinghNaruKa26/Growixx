@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & SignUp Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .card:hover {
+            transform: translateY(-10px);
+            transition: transform 0.3s ease-in-out;
+        }
+    </style>
+</head>
+<body class=" flex bg-[#e5e4e2] items-center justify-center min-h-screen">
+
+    <!-- Modal Container -->
+    <div id="modal" class=" fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden">
+        <div class="bg-[#e5e4e2] rounded-lg w-full max-w-md p-6 space-y-4 relative">
+            
+            <!-- Close Button -->
+            <button onclick="closeModal()" class="absolute top-1  right-1 rounded-lg text-gray-600 text-[25px] hover:bg-[#34a853] hover:text-black">
+                &times;
+            </button>
+            
+            <!-- Form Container -->
+            <div class="" id="form-container ">
+                
+                <!-- Login Form -->
+                <form  id="login-form" class="card space-y-4" onsubmit="event.preventDefault(); handleLogin();">
+                    <h2 class="text-2xl font-bold text-center">Login</h2>
+                    <input type="email" id="login-email" placeholder="Email" class="w-full p-2 border rounded">
+                    <input type="password" id="login-password" placeholder="Password" class="w-full p-2 border rounded">
+                    <button type="submit" class="w-full bg-[#34a853] text-white py-2 rounded">Login</button>
+                    <p class="text-center">Don't have an account? 
+                        <span class="text-blue-600 cursor-pointer" onclick="toggleForm()">Sign Up</span>
+                    </p>
+                </form>
+
+                <!-- Signup Form -->
+                <form id="signup-form" class="card space-y-4 hidden" onsubmit="event.preventDefault(); handleSignup();">
+                    <h2 class="text-2xl font-bold text-center">Sign Up</h2>
+                    <input type="text" id="signup-name" placeholder="Name" class="w-full p-2 border rounded">
+                    <input type="email" id="signup-email" placeholder="Email" class="w-full p-2 border rounded">
+                    <input type="password" id="signup-password" placeholder="Password" class="w-full p-2 border rounded">
+                    <button type="submit" class="w-full bg-[#34a853] text-white py-2 rounded">Sign Up</button>
+                    <p class="text-center">Already have an account? 
+                        <span class="text-green-600 cursor-pointer" onclick="toggleForm()">Login</span>
+                    </p>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Trigger Button -->
+    <button onclick="openModal()" class="bg-[#34a853] text-white px-5 py-4  rounded-lg">
+         Login &nbsp;   Or &nbsp;    Sign Up <br>
+         Click Here
+    </button>
+
+    <script>
+        // Open Modal
+        function openModal() {
+            document.getElementById('modal').classList.remove('hidden');
+        }
+
+        // Close Modal
+        function closeModal() {
+            document.getElementById('modal').classList.add('hidden');
+        }
+
+        // Toggle Between Forms
+        function toggleForm() {
+            document.getElementById('login-form').classList.toggle('hidden');
+            document.getElementById('signup-form').classList.toggle('hidden');
+        }
+
+        // Handle Login
+        function handleLogin() {
+            const email = document.getElementById('login-email').value;
+            const password = document.getElementById('login-password').value;
+
+            fetch('backend.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ action: 'login', email, password })
+            })
+            .then(response => response.json())
+            .then(data => alert(data.message))
+            .catch(error => console.error('Error:', error));
+        }
+
+        // Handle Signup
+        function handleSignup() {
+            const name = document.getElementById('signup-name').value;
+            const email = document.getElementById('signup-email').value;
+            const password = document.getElementById('signup-password').value;
+
+            fetch('backend.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ action: 'signup', name, email, password })
+            })
+            .then(response => response.json())
+            .then(data => alert(data.message))
+            .catch(error => console.error('Error:', error));
+        }
+    </script>
+</body>
+</html>
