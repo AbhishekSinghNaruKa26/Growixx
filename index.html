@@ -1,410 +1,495 @@
-<!doctype html>
-<html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Growixx</title>
+  <link rel="website Icon" type="png" href="https://growixx.com/assets/img/pg1.png">
+  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link
     rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="index.css">
     <script src="https://unpkg.com/scrollreveal@4"></script>
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+</head>
 
+<body class="bg-[#e5e4e2]">
 
-  </head>
-  <body class="bg-[#e5e4e2]   ">
-    <header class="">
-        <nav class="flex justify-between  md:z-9999  md:fixed md:top-0 items-center px-10 bg-white w-[100%] h-[65px] m-auto ">
-            <div>
-                <img class="h-[40px] w-[180px]  pl-" src="https://growixx.com/assets/img/pg1.png" alt="">
-            </div>
-            <div class="nav-links md:static md:min-h-fit   absolute bg-white min-h-[60vh] left-0 top-[-100%] md:w-auto w-full flex items-center px-5" >
-                <ul class="flex  md:flex-row flex-col md:items-center md:gap-[4vw] gap-8  ">
-                    <li><a class="hover:text-[#34a853] font-bold" href="#Home">Home</a></li>
-                    <li><a class="hover:text-[#34a853] font-bold"href="#About">About</a></li>
-                    <li><a class="hover:text-[#34a853] font-bold" href="#Services">Services</a></li>
-                    <li><a class="hover:text-[#34a853] font-bold" href="#clients">Clients</a></li>
-                    <li><a class="hover:text-[#34a853] font-bold" href="#portfolio">portfolio</a></li>
-                    <li><a class="hover:text-[#34a853] font-bold"href="#contact">Contact us</a></li>
-                    </ul>
-            </div>
-            <div class="flex items-center gap-6  ">
+  <!-- Header Section -->
+  <header class="w-full fixed top-0 left-0 z-50 shadow-md">
+    <nav class="bg-white flex justify-between items-center px-6 md:px-10 h-[65px]">
+      <!-- Logo -->
+      <div>
+        <a href="#">
+          <img class="h-[40px] w-[180px]" src="https://growixx.com/assets/img/pg1.png" alt="Logo">
+        </a>
+      </div>
 
-                <button class=" cursor-pointer bg-[#34a853] text-white px-5 rounded-3xl py-2"  ><a href="http://127.0.0.1:8080/login-register/join.html"> Join As Bussniess </a> </button>
+      <!-- Navigation Links -->
+      <div id="navLinks"
+        class="nav-links md:static md:min-h-fit fixed bg-white min-h-[60vh] left-0 top-[-100%] md:w-auto w-full flex flex-col md:flex-row items-center px-5 transition-all duration-300 ease-in-out">
+        <ul class="flex flex-col md:flex-row md:items-center md:gap-[4vw] gap-8 w-full md:w-auto">
+          <li><a class="hover:text-[#34a853] font-bold" href="#Home">Home</a></li>
+          <li><a class="hover:text-[#34a853] font-bold" href="#About">About</a></li>
+          <li><a class="hover:text-[#34a853] font-bold" href="#Services">Services</a></li>
+          <li><a class="hover:text-[#34a853] font-bold" href="#clients">Clients</a></li>
+          <li><a class="hover:text-[#34a853] font-bold" href="#portfolio">Portfolio</a></li>
+          <li><a class="hover:text-[#34a853] font-bold" href="#contact">Contact Us</a></li>
 
-                <button class=" cursor-pointer bg-[#34a853] text-white px-5 rounded-3xl py-2"  ><a href="http://localhost:8080/login-register/login.html">  Sign In </a> </button>
-                <ion-icon onclick="onToggleMenu(this)"  name="menu" class="text-2xl md:hidden cursor-pointer"></ion-icon>
-            </div>
+          <!-- Join As Business Button in List for Mobile -->
+          <li class="block md:hidden">
+            <a href="http://127.0.0.1:8080/login-register/join.html"
+              class="bg-[#34a853] text-white px-4 py-2 rounded-3xl hover:bg-[#2c8e46] transition text-center block text-sm">Join
+              As Business</a>
+          </li>
 
+          <!-- Sign In Button in List for Mobile -->
+          <li class="block md:hidden">
+            <a href="http://localhost:8080/login-register/login.html"
+              class="bg-[#34a853] text-white px-4 py-2 rounded-3xl hover:bg-[#2c8e46] transition text-center block text-sm">Sign
+              In</a>
+          </li>
+        </ul>
+      </div>
 
-            
-            
-     
-        </nav>
-    </header>
+      <!-- Buttons and Hamburger Menu -->
+      <div class="flex items-center gap-4">
+        <!-- Join As Business Button for Desktop -->
+        <a href="http://127.0.0.1:8080/login-register/join.html"
+          class="hidden md:block bg-[#34a853] text-white px-5 rounded-3xl py-2 hover:bg-[#2c8e46] transition">Join As
+          Business</a>
 
-    <main class=" md:mt-16 pt-9 ">
-        <section class="Home  h-[100vh]" id="Home">
-        <div class="bg-[url(https://growixx.com/assets/img/back-view-businessman-looking-skyscrapers-against-cloudy-sky-background_781958-645.avif)] -translate-y-10 md:bg-[url(img3.jpg)] bg-[#00000099] bg-blend-darken bg-cover  h-[560px]  bg-cover items-center justify-center   ">
-                <h1 class="text-[28px] md:text-[48px] h-[350px] -translate-y-16 text-white font-bold p-30 animate__animated animate__zoomIn animate__delay-1s">Improve Your Business Growth with <br>Expert Digital Marketing Solutions in <br> Rajasthan</h1>
-            <h6 class="  text-[16px] pl-[123px] -translate-y-10 text-white font-bold animate__animated animate__slideInLeft animate__delay-1s animate__slower	4s animate__infinite infinite ">Transforming Content into Customers with Proven Digital Marketing Strategies
+        <!-- Sign In Button for Desktop -->
+        <a href="http://localhost:8080/login-register/login.html"
+          class="hidden md:block bg-[#34a853] text-white px-5 rounded-3xl py-2 hover:bg-[#2c8e46] transition">Sign
+          In</a>
+
+        <!-- Hamburger Menu Icon -->
+        <ion-icon name="menu" onclick="onToggleMenu()" class="text-3xl md:hidden cursor-pointer"></ion-icon>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Dummy Content to Enable Scrolling -->
+  <main class="">
+     <!--Home Section-->
+
+    <section class="Home h-screen" id="Home">
+        <div class="bg-[url(https://growixx.com/assets/img/back-view-businessman-looking-skyscrapers-against-cloudy-sky-background_781958-645.avif)] md:bg-[url(img3.jpg)] bg-[#00000099] bg-blend-darken bg-cover bg-center h-full flex flex-col items-center justify-center text-center px-4">
+            <h1 class="text-[28px] md:text-[48px] text-white font-bold animate__animated animate__zoomIn animate__delay-1s">
+                Improve Your Business Growth with <br class="hidden md:block"> Expert Digital Marketing Solutions in <br class="hidden md:block"> Rajasthan
+            </h1>
+            <h6 class=" abhsa text-[16px] md:text-[20px] text-white font-bold mt-4 ">
+                Transforming Content into Customers with Proven Digital Marketing Strategies
             </h6>
-            <button class="  bg-[#34A853] hover:bg-transparent hover:border-3 border-white -translate-y-7 rounded-md ml-[123px] text-[24px] font-bold mt-[25px] text-white font-bold h-[60px] w-[218px] ">Get Started</button>
-            
-        </div>
-
-        
-
-    </section>
-       
-
-    <!--login  & registration form -->
-    
-
-<!--Pragraph part 1-->
-<section class="About h-[150vh]" id="About">
-<div class=" md:flex  ">
-        <div class="paragraph1 h-[520px] mx-28 mt-0 md:mx-16 md:h-[645px] w-[520px]  md:mt-[80px]   ">
-            <div class="text-transfer ">
-                <h1 class="flex justify-center  h-[40px] text-[34px] font-bold ">Who We Are ?</h1>
-                <p class=" font-bold pt-[50px] text-black"> At Growix, we specialize in building brands that resonate and convert. From digital marketing to video production, we deliver impactful solutions that drive results. Our goal is simple – driving quality leads and boosting sales for every business. Let’s turn your vision into success, one lead at a time!</p>
-            </div>
-           <div class="mt-[50px] text-transfer">
-            <h1 class="flex justify-center h-[40px] text-[34px] font-bold">Our Core Values</h1>
-            <p class="font-bold pt-[50px] text-black">Growix Technologies comprises of a collective team of dedicated team of creatives who are ready to implement your idea into reality We use the latest set of market-available technologies into making your dreams come true in the digital space</p>
-           </div>
-           </div>
-           <!--Pragraph part 2-->
-
-           <div class=" mx-20 md:grid grid-cols-2 md:w-[770px] h-[705px] gap-4 md:mx-6 md:mt-[100px] mt-10">
-            <div class="text-transfer  pb-5 "> 
-                <i class="fa-regular fa-images  mx-64 md:mx-0  text-[30px] text-[#34a853] "></i>
-                <h1 class="ml-32 md:ml-1 h-[24px] text-[20px] font-bold">Experienced & Friendly Team </h1>
-                <p class="ml-7 font-bold pt-[25px] text-[#848484]">Our team has the experience to drive results, but we also value building strong relationships with our clients. We're approachable, easy to work with, and dedicated to helping your business succeed.
-                </p>
-            </div>
-            <div class="text2 pb-5 ">
-                <i class="fa-solid fa-receipt mx-64 md:mx-0  text-[30px] text-[#34a853]"></i>
-                <h1 class="ml-32 md:ml-1 h-[24px] text-[20px] font-bold">Focused on Your Success
-                </h1>
-                <p class="font-bold pt-[25px] text-[#848484]">We focus on what matters most to you: more leads and higher sales. Our strategies are designed to help you grow and achieve real, measurable results.
-                </p>
-            </div>
-            <div class="text-transfer pb-5">
-                <i class="fa-solid fa-cube mx-64 md:mx-0  text-[30px] text-[#34a853]"></i>
-                <h1 class="ml-40 md:ml-1 h-[24px] text-[20px] font-bold">Tailored Solutions
-                </h1>
-                <p class="font-bold pt-[25px] text-[#848484]">Every business is different. That’s why we create custom marketing plans that are made to fit your unique needs and goals.
-                </p>
-            </div>
-            <div class="text2 pb-10">
-                <i class="fa-solid fa-shield  mx-64 md:mx-0  text-[30px] text-[#34a853]"></i>
-                <h1 class="ml-32 md:ml-1 h-[24px] text-[20px] font-bold">Transparent & Supportive
-                </h1>
-                <p class="font-bold pt-[25px] text-[#848484]">We believe in open communication. You’ll always know what we’re doing and how it’s benefiting your business. We’re here to support you every step of the way.
-                </p>
-            </div>
-            <div class="text-transfer pb-5">
-                <i class="fa-solid fa-shield  mx-64 md:mx-0  text-[30px] text-[#34a853]"></i>
-                <h1 class="ml-32 md:ml-1 h-[24px] text-[20px] font-bold">Local Expertise in Chennai
-                </h1>
-                <p class="font-bold pt-[25px] text-[#848484]">As a Chennai-based agency, we understand the local market and know how to help businesses here succeed. Whether you’re targeting the local market or beyond, we have the expertise to help you grow. We’re grateful to work with incredible clients</p>
-            </div>
-           </div>
+            <a href="http://localhost:8080/login-register/login.html">
+            <button class="bg-[#34A853] hover:bg-transparent hover:border hover:border-white rounded-md text-[20px] md:text-[24px] font-bold mt-6 text-white py-3 px-6 transition-all duration-300">
+                Get Started
+            </button>
+            </a>
         </div>
     </section>
 
-        <!--Services-->
-        <section class="Services h-[150vh]" id="Services">
-        <div class="services h-[700px] bg-black text-white mt-[550px] md:mt-[90px] pt-7 justify-items-center">
-            <h2 class=" text-[20px] font-bold pt-[40px] border-b-4 border-[#34a853]">SERVICES</h2>
-            <p class="mx-2 ml-7 h-[30px] text-[15px] font-bold pt-[20px]">Explore Growix’s digital marketing services: social media, performance marketing, SEO, graphic design, and more in Chennai.
-            </p>
+   <!--About Section-->
 
-            <!--8box-->
-            <div class="pt-16 flex   grid grid-cols-4 gap-10 px-10 ">
-                <div class=" text-white h-[220px] w-[200px] text-transfer bg-[#444444] pt-10 justify-items-center items-center rounded-xl hover:my-rotate-y-180 cursor-pointer duration-1000 " >
-                    <img  class="h-[94px] w-[94px] bg-cover" src="https://growixx.com/assets/img/icons/Digital Marketing.png" alt="">
-                    <p class="pt-3 border-b-4 border-[#34a853]">Digital marketing</p>
-                </div>
-                <div class="text-white h-[220px] w-[200px] text2 bg-[#444444] pt-10 justify-items-center items-center rounded-xl" >
-                    <img  class="h-[94px] w-[94px] bg-cover" src="https://growixx.com/assets/img/icons/Social.png" alt="">
-                    <p class="pt-6 border-b-4 border-[#34a853]">Social Media Marketing</p>
-                </div>
-                <div class="text-white h-[220px] text-transfer w-[200px] bg-[#444444] pt-10 justify-items-center items-center rounded-xl" >
-                    <img  class="h-[94px] w-[94px] bg-cover" src="https://growixx.com/assets/img/icons/Website.png" alt="">
-                    <p class="pt-6 border-b-4 border-[#34a853]">Website Design</p>
-                </div>
-                <div class="text-white h-[220px] text2 w-[200px] bg-[#444444] pt-10 justify-items-center items-center rounded-xl" >
-                    <img  class="h-[94px] w-[94px] bg-cover" src="https://growixx.com/assets/img/icons/Email.png" alt="">
-                    <p class="pt-6 border-b-4 border-[#34a853]">Email Marketing</p>
-                </div>
-                <div class="text-white h-[220px] text-transfer w-[200px] bg-[#444444] pt-10 justify-items-center items-center rounded-xl" >
-                    <img  class="h-[94px] w-[94px] bg-cover" src="https://growixx.com/assets/img/icons/Performance.png" alt="">
-                    <p class="pt-6 border-b-4 border-[#34a853]">performance Marketing</p>
-                </div>
-                <div class="text-white h-[220px] text2 w-[200px] bg-[#444444] pt-10 justify-items-center items-center rounded-xl" >
-                    <img  class="h-[94px] w-[94px] bg-cover" src="https://growixx.com/assets/img/icons/Content.png" alt="">
-                    <p class="pt-6 border-b-4 border-[#34a853]">Content Creation / <br>Personal Branding</p>
-                </div>
-                <div class="text-white h-[220px] text-transfer w-[200px] bg-[#444444] pt-10 justify-items-center items-center rounded-xl" >
-                    <img  class="h-[94px] w-[94px] bg-cover" src="	https://growixx.com/assets/img/icons/Graphic%20Design.png" alt="">
-                    <p class="pt-6 border-b-4 border-[#34a853]">Graphics Designing </p>
-                </div>
-                <div class="text-white h-[220px] text2 w-[200px] bg-[#444444] pt-10 justify-items-center items-center rounded-xl" >
-                    <img  class="h-[94px] w-[94px] bg-cover" src="https://growixx.com/assets/img/icons/Video%20Editing.png" alt="">
-                    <p class="pt-6 border-b-4 border-[#34a853]">Viedo production</p>
-                </div>
+   <section class="About min-h-screen py-10" id="About">
+    <div class="container mx-auto px-4 md:flex md:space-x-8">
+        <!-- Left Column: Who We Are and Core Values -->
+        <div class="w-full md:w-1/2 mb-8 md:mb-0">
+            <div class="text-center md:text-left mb-10 text-transfer">
+                <h1 class="text-[28px] md:text-[34px] font-bold">Who We Are?</h1>
+                <p class="mt-4 text-[16px] md:text-[18px]  text-black font-semibold">
+                    At Growix, we specialize in building brands that resonate and convert. From digital marketing to video production, we deliver impactful solutions that drive results. Our goal is simple – driving quality leads and boosting sales for every business. Let’s turn your vision into success, one lead at a time!
+                </p>
             </div>
-
+            <div class="text-center md:text-left text-transfer">
+                <h1 class="text-[28px] md:text-[34px] font-bold">Our Core Values</h1>
+                <p class="mt-4 text-[16px] md:text-[18px] text-black font-semibold">
+                    Growix Technologies comprises a dedicated team of creatives who are ready to implement your idea into reality. We use the latest set of market-available technologies to make your dreams come true in the digital space.
+                </p>
+            </div>
         </div>
-    </section>
 
-    <!--count Section-->
-
-    <div class="mt-[0px] mb-[50px]  ">
-        <div class="h-[200px] flex justify-between mx-[40px] lg:col-span-2 text-transfer" >
-            
-            <div class="w-[216px] h-[180px] rounded-[8px] bg-[] shadow-2xl ">
-                <div class="h-[54px] w-[54px] flex justify-center items-center bg-white items-center rounded-full mx-20 -translate-y-7"><i class="fa-regular fa-face-smile text-[#34a853] "></i></div>
-                <span class=" num flex justify-center text-[36px] font-bold" data-val="458">0000</span>
-                <p class="flex justify-center">Qualified Leads <br> Genrated</p>
+        <!-- Right Column: Core Value Icons and Descriptions -->
+        <div class="w-full md:w-1/2 grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div class="text-center p-4 rounded-lg shadow-lg bg-white text-transfer">
+                <i class="fa-regular fa-images text-[30px] text-[#34a853] mb-2"></i>
+                <h2 class="text-[20px] font-bold">Experienced & Friendly Team</h2>
+                <p class="text-[14px] text-[#848484] mt-2">
+                    Our team has the experience to drive results, but we also value building strong relationships with our clients. We're approachable, easy to work with, and dedicated to helping your business succeed.
+                </p>
             </div>
-
-            <div class="w-[216px] h-[180px] rounded-[8px] bg-[] shadow-2xl ">
-                <div class="h-[54px] w-[54px] flex justify-center items-center bg-white items-center rounded-full mx-20 -translate-y-7"><i class="fa-regular fa-address-card text-[#34a853]"></i></div>
-                <span class="num flex justify-center text-[36px] font-bold" data-val="364">0000</span>
-                <p class=" flex justify-center">Qualified Sales  <br> Genrated</p>
+            <div class="text-center p-4 rounded-lg shadow-lg bg-white text2">
+                <i class="fa-solid fa-receipt text-[30px] text-[#34a853] mb-2"></i>
+                <h2 class="text-[20px] font-bold">Focused on Your Success</h2>
+                <p class="text-[14px] text-[#848484] mt-2">
+                    We focus on what matters most to you: more leads and higher sales. Our strategies are designed to help you grow and achieve real, measurable results.
+                </p>
             </div>
-
-            <div class="w-[216px] h-[180px] rounded-[8px] bg-[] shadow-2xl ">
-                <div class="h-[54px] w-[54px] flex justify-center items-center bg-white items-center rounded-full mx-20 -translate-y-7"><i class="fa-regular fa-wallet text-[#34a853]"></i></div>
-                <span class="num flex justify-center text-[36px] font-bold" data-val="05">00</span>
-                <p class="flex justify-center">Years Of Experience </p>
+            <div class="text-center p-4 rounded-lg shadow-lg bg-white text-transfer">
+                <i class="fa-solid fa-cube text-[30px] text-[#34a853] mb-2"></i>
+                <h2 class="text-[20px] font-bold">Tailored Solutions</h2>
+                <p class="text-[14px] text-[#848484] mt-2">
+                    Every business is different. That’s why we create custom marketing plans that are made to fit your unique needs and goals.
+                </p>
             </div>
-
-            <div class="w-[216px] h-[180px] rounded-[8px] bg-[] shadow-2xl ">
-                <div class="h-[54px] w-[54px] flex justify-center items-center bg-white items-center rounded-full mx-20 -translate-y-7"><i class="fa-regular fa-user text-[#34a853]"></i></div>
-                <span class="num flex justify-center text-[36px] font-bold" data-val="235">0000</span>
-                <p class="flex justify-center">Happy Clients</p>
+            <div class="text-center p-4 rounded-lg shadow-lg bg-white text2">
+                <i class="fa-solid fa-shield text-[30px] text-[#34a853] mb-2"></i>
+                <h2 class="text-[20px] font-bold">Transparent & Supportive</h2>
+                <p class="text-[14px] text-[#848484] mt-2">
+                    We believe in open communication. You’ll always know what we’re doing and how it’s benefiting your business. We’re here to support you every step of the way.
+                </p>
             </div>
-
-        </div>
-    </div>
-
-    <!--clients-->
-    <section class="clients h-[100vh]" id="clients">
-    <div class="h-[430px] w-full mt-[200px] bg-black text-white mb-28 ">
-        <div class="font-bold text-[32px] flex justify-center pt-15  ">
-             <h1 class="border-b-3 border-[#34a853]">Our Clients </h1>
+            <div class="text-center p-4 rounded-lg shadow-lg bg-white text-transfer">
+                <i class="fa-solid fa-location-dot text-[30px] text-[#34a853] mb-2"></i>
+                <h2 class="text-[20px] font-bold">Local Expertise in Chennai</h2>
+                <p class="text-[14px] text-[#848484] mt-2">
+                    As a Chennai-based agency, we understand the local market and know how to help businesses here succeed. Whether you’re targeting the local market or beyond, we have the expertise to help you grow.
+                </p>
             </div>
-
-        <div class="h-[160px] w-[700px] flex justify-center items-center mx-80 pt-20 gap-30 col-lg-4  col-sm-1 animate__animated animate__zoomIn animate__delay-1s animate__infinite infinite animate__slower ">
-
-            <img class="h-[114px] w-[114px] border border-3-white" src="https://growixx.com/assets/img/techicons/12.jpg" alt="">
-            <img class="h-[114px] w-[114px] border border-3-white" src="https://growixx.com/assets/img/techicons/9.jpg" alt="">
-            <img class="h-[114px] w-[114px] border border-3-white" src="	https://growixx.com/assets/img/techicons/3.jpg" alt="">
-            <img class="h-[114px] w-[114px]" src="https://growixx.com/assets/img/techicons/6.jpg"alt="">
-
-
         </div>
     </div>
 </section>
 
-    <!--portfolio section-->
-    <section class="portfolio h-[100vh]" id="portfolio">
-   <div class="w-full h-[]  flex justify-center ">
-    <div class="title w-[696px] h-[180px]">
-        <h2 class="flex justify-center text-[50px] font-bold pt-10 pb-5">PORTFOLIO</h2>
-        <P class="text-[20px] ">We have a deep understanding of user habits and behaviors. We are committed to using fact-based knowledge and our unique brand of innovation to help you dominate the competition. Every project is customized for optimum visibility and audience response.</P>
-    </div>
-   </div>
-
-
-   <div class="slider pt-20 size-full  ">
-    <div class="slide-track  w-[300px] ">
-        <div class="slide ">
-        <img class="picture" src="https://growixx.com/assets/img/portfolio/portfolio6.png" alt="">
+     <!--Services-->
+     <section class="Services min-h-screen py-10" id="Services">
+        <div class="bg-black text-white py-10">
+            <div class="text-center">
+                <h2 class="text-[24px] md:text-[28px] font-bold border-b-4 inline-block border-[#34a853]">
+                    SERVICES
+                </h2>
+                <p class="mt-4 text-[14px] md:text-[16px] font-bold px-4">
+                    Explore Growix’s digital marketing services: social media, performance marketing, SEO, graphic design, and more in Chennai.
+                </p>
+            </div>
+    
+            <!-- Services Cards -->
+            <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 px-4">
+                <div class="bg-[#444444] text-center rounded-xl p-5 hover:scale-105 duration-300 cursor-pointer text-transfer">
+                    <img class="h-[94px] w-[94px] mx-auto" src="https://growixx.com/assets/img/icons/Digital Marketing.png" alt="Digital Marketing">
+                    <p class="pt-4 border-b-4 border-[#34a853] inline-block">Digital Marketing</p>
+                </div>
+                <div class="bg-[#444444] text-center rounded-xl p-5 hover:scale-105 duration-300 cursor-pointer text2">
+                    <img class="h-[94px] w-[94px] mx-auto" src="https://growixx.com/assets/img/icons/Social.png" alt="Social Media Marketing">
+                    <p class="pt-4 border-b-4 border-[#34a853] inline-block">Social Media Marketing</p>
+                </div>
+                <div class="bg-[#444444] text-center rounded-xl p-5 hover:scale-105 duration-300 cursor-pointer text-transfer">
+                    <img class="h-[94px] w-[94px] mx-auto" src="https://growixx.com/assets/img/icons/Website.png" alt="Website Design">
+                    <p class="pt-4 border-b-4 border-[#34a853] inline-block">Website Design</p>
+                </div>
+                <div class="bg-[#444444] text-center rounded-xl p-5 hover:scale-105 duration-300 cursor-pointer text2">
+                    <img class="h-[94px] w-[94px] mx-auto" src="https://growixx.com/assets/img/icons/Email.png" alt="Email Marketing">
+                    <p class="pt-4 border-b-4 border-[#34a853] inline-block">Email Marketing</p>
+                </div>
+                <div class="bg-[#444444] text-center rounded-xl p-5 hover:scale-105 duration-300 cursor-pointer text-transfer">
+                    <img class="h-[94px] w-[94px] mx-auto" src="https://growixx.com/assets/img/icons/Performance.png" alt="Performance Marketing">
+                    <p class="pt-4 border-b-4 border-[#34a853] inline-block">Performance Marketing</p>
+                </div>
+                <div class="bg-[#444444] text-center rounded-xl p-5 hover:scale-105 duration-300 cursor-pointer text2">
+                    <img class="h-[94px] w-[94px] mx-auto" src="https://growixx.com/assets/img/icons/Content.png" alt="Content Creation">
+                    <p class="pt-4 border-b-4 border-[#34a853] inline-block">Content Creation /<br>Personal Branding</p>
+                </div>
+                <div class="bg-[#444444] text-center rounded-xl p-5 hover:scale-105 duration-300 cursor-pointer text-transfer">
+                    <img class="h-[94px] w-[94px] mx-auto" src="https://growixx.com/assets/img/icons/Graphic%20Design.png" alt="Graphics Designing">
+                    <p class="pt-4 border-b-4 border-[#34a853] inline-block">Graphics Designing</p>
+                </div>
+                <div class="bg-[#444444] text-center rounded-xl p-5 hover:scale-105 duration-300 cursor-pointer text2">
+                    <img class="h-[94px] w-[94px] mx-auto" src="https://growixx.com/assets/img/icons/Video%20Editing.png" alt="Video Production">
+                    <p class="pt-4 border-b-4 border-[#34a853] inline-block">Video Production</p>
+                </div>
+            </div>
         </div>
-        <div class="slide">
-        <img  class="picture" src="https://growixx.com/assets/img/portfolio/portfolio7.png" alt="">
-       </div>
-       <div class="slide">
-        <img class="picture"  src="https://growixx.com/assets/img/portfolio/portfolio8.png" alt="">
-      </div>
-      <div class="slide">
-        <img class="picture"  src="https://growixx.com/assets/img/portfolio/portfolio8.png" alt="">
-      </div>
-      <div class="slide">
-        <img class="picture"  src="https://growixx.com/assets/img/portfolio/portfolio8.png" alt="">
-      </div>
-      <div class="slide">
-        <img class="picture"  src="https://growixx.com/assets/img/portfolio/portfolio8.png" alt="">
-      </div>
-      <div class="slide">
-        <img class="picture"   src="https://growixx.com/assets/img/portfolio/portfolio8.png" alt="">
-      </div>
-      <div class="slide">
-        <img class="picture"   src="https://growixx.com/assets/img/portfolio/portfolio8.png" alt="">
-      </div>
-      <div class="slide">
-        <img class="picture"  src="https://growixx.com/assets/img/portfolio/portfolio8.png" alt="">
-      </div>
-              
-    </div>
-   </div>
-   </section>
+    </section>
+    
 
-   <!--Ready To Grow Your Bussniess -->
-   <div class="h-[360px] w-full bg-black text-white mb-16 ">
-    <div class="title h-[132px] w-full  justify-center ">
-        <h2 class="text-[32px] flex justify-center pt-10 border-b-4  border-[#34a853] font-bold">Ready To Grow Your Bussniess ?</h2></div>
-    <div>
-        <p class="flex justify-center pt-5 text-[20px]">Lets Make Your Success Story Next !</p>
-    </div>
-
-    <div class="flex justify-center pt-20">
-        <button class="border-2 border-white w-[300px] h-[55px] rounded-lg hover:bg-[#34a853]">Sechdule a Free Consulation </button>
-    </div>
-   </div>
-
-   <!--Contact information-->
-   <!--part1-->
-   <section class="contact h-[150vh]" id="contact">
-   <div class="h-[200px] w-full pt-16 mb-24">
-    <div class="title h-[58px] flex justify-center">
-        <span class="text-[40px] font-bold flex justify-center border-b-4 border-[#34a853] ">We Are Ready ! Are You ?</span>
-    </div>
-    <div class="h-[70px] w-[1000px] mt-10 mx-64 line text-base/8 flex justify-center ">
-        <span class="text-[20px]">Unlock growth and elevate your brand with expert digital marketing, impactful content creation, engaging social media management, and stunning, conversion-focused web design—backed by a commitment to your success. <br>
-
-            Feel free to contact us over the phone, email, or contact form below to leverage all of the above for your business.</span>
-    </div>
-
-   </div>
-
-   <!--part2-->
-
-   <div class="main1 h-[460px] w-[960px] grid grid-cols-2 gap-100 mx-9 ">
-    <div>
-        <div class=" info-box w-[600px] h-[200px] rounded-3xl pt-12 m-[24px] shadow-2xl " >
-            <i class="fa-solid fa-location-dot pl-[300px] text-[20px] text-[#34a853]"></i>
-            <h2 class="pl-[250px] text-[20px] text-[#777777] font-bold">Our Address</h2>
-            <p class="px-28 text-[#777777]  ">Sector 4 Kudi Bhagtasni Housing Board Jodhpur Raj.</p>
-        </div>
-        <div class="flex px-10">
-        <div class="email-box h-[200px] w-[216px] shadow-2xl pt-3 rounded-xl m-[24px] "> 
-            <i class="fa-solid fa-envelope text-[20px] text-[#34a853] px-24 pt-10"></i>
-            <h1 class="pl-20 text-[#777777] font-bold">Email Us </h1>
-            <p class="text-[#777777] pl-2 pt-4">Growixxagency@Gmail.com</p>
-
-        </div>
-
-        <div class="email-box h-[200px] w-[216px] shadow-2xl rounded-xl m-[24px] "> 
-            <i class="fa-solid fa-phone text-[20px] text-[#34a853] px-24 pt-10 "></i>
-            <h1 class="pl-20 text-[#777777] font-bold">Call Us</h1>
-            <p class="text-[#777777] pl-10 pt-2">+91-7413940716 <br> +91-9784247815 <br> +91-9782351129 </p>
-
+     <!--count Section-->
+     <div class="mt-0 mb-[50px] px-4">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mx-auto max-w-7xl text-transfer">
+            <!-- Qualified Leads Generated -->
+            <div class="w-full h-[180px] rounded-[8px] bg-white shadow-2xl p-4 relative text-center">
+                <div class="h-[54px] w-[54px] flex justify-center items-center bg-white rounded-full mx-auto -translate-y-7 shadow-md">
+                    <i class="fa-regular fa-face-smile text-[#34a853] text-[24px]"></i>
+                </div>
+                <span class="num block text-[36px] font-bold" data-val="458">0000</span>
+                <p class="text-[14px] font-semibold">Qualified Leads <br> Generated</p>
+            </div>
+    
+            <!-- Qualified Sales Generated -->
+            <div class="w-full h-[180px] rounded-[8px] bg-white shadow-2xl p-4 relative text-center">
+                <div class="h-[54px] w-[54px] flex justify-center items-center bg-white rounded-full mx-auto -translate-y-7 shadow-md">
+                    <i class="fa-regular fa-address-card text-[#34a853] text-[24px]"></i>
+                </div>
+                <span class="num block text-[36px] font-bold" data-val="364">0000</span>
+                <p class="text-[14px] font-semibold">Qualified Sales <br> Generated</p>
+            </div>
+    
+            <!-- Years Of Experience -->
+            <div class="w-full h-[180px] rounded-[8px] bg-white shadow-2xl p-4 relative text-center">
+                <div class="h-[54px] w-[54px] flex justify-center items-center bg-white rounded-full mx-auto -translate-y-7 shadow-md">
+                    <i class="fa-regular fa-wallet text-[#34a853] text-[24px]"></i>
+                </div>
+                <span class="num block text-[36px] font-bold" data-val="05">00</span>
+                <p class="text-[14px] font-semibold">Years Of Experience</p>
+            </div>
+    
+            <!-- Happy Clients -->
+            <div class="w-full h-[180px] rounded-[8px] bg-white shadow-2xl p-4 relative text-center">
+                <div class="h-[54px] w-[54px] flex justify-center items-center bg-white rounded-full mx-auto -translate-y-7 shadow-md">
+                    <i class="fa-regular fa-user text-[#34a853] text-[24px]"></i>
+                </div>
+                <span class="num block text-[36px] font-bold" data-val="235">0000</span>
+                <p class="text-[14px] font-semibold">Happy Clients</p>
+            </div>
         </div>
     </div>
-    </div>
 
-    <div class="main2 h-[450px] w-[600px] mt-5 shadow-2xl rounded-3xl ">
-        <div class="pt-8 pl-5 grid grid-cols-2">
-            <input class="h-[42px] w-[250px] pl-5 rounded-xl bg-white" id="text"  type="text" placeholder="Your Name">
-            <input class="h-[42px] w-[250px] pl-5 rounded-xl bg-white" id="text"  type="text" placeholder="Your Email">
+     <!--clients-->
+     <section class="clients h-auto py-16 bg-black text-white" id="clients">
+        <div class="max-w-7xl mx-auto text-center">
+            <!-- Title -->
+            <h1 class="text-[32px] font-bold border-b-4 border-[#34a853] inline-block pb-2">Our Clients</h1>
+    
+            <!-- Client Logos -->
+            <div class="flex flex-wrap justify-center items-center gap-8 mt-10 animate__animated animate__zoomIn animate__delay-1s animate__infinite infinite animate__slower">
+                <img class="h-[80px] w-[80px] md:h-[114px] md:w-[114px] border-2 border-white rounded-full object-cover" src="https://growixx.com/assets/img/techicons/12.jpg" alt="Client Logo">
+                <img class="h-[80px] w-[80px] md:h-[114px] md:w-[114px] border-2 border-white rounded-full object-cover" src="https://growixx.com/assets/img/techicons/9.jpg" alt="Client Logo">
+                <img class="h-[80px] w-[80px] md:h-[114px] md:w-[114px] border-2 border-white rounded-full object-cover" src="https://growixx.com/assets/img/techicons/3.jpg" alt="Client Logo">
+                <img class="h-[80px] w-[80px] md:h-[114px] md:w-[114px] border-2 border-white rounded-full object-cover" src="https://growixx.com/assets/img/techicons/6.jpg" alt="Client Logo">
+            </div>
         </div>
-
-        <div class="pt-8 pl-5 grid grid-cols-2">
-            <input class="h-[42px] w-[250px] pl-5 rounded-xl bg-white" id="text"  type="text" placeholder="Your Number">
-            <select class="h-[42px] w-[250px] bg-white"  name="Select Service" id="service">
-                <option value="Select">Select Service</option>
-                <option value="">Viedo production</option>
-                <option value="">Graphic Designing</option>
-                <option value="">Content Creation</option>
-                <option value="">Perfomance Marketing</option>
-                <option value="">Email Marketing</option>
-                <option value="">Website Design</option>
-                <option value="">Social Media Marketing</option>
-                <option value="">Digital Marketing</option>
-            </select>
-        </div>
-
-        <textarea class="w-[540px] h-[130px] rounded-3xl bg-white ml-7 mt-7 pl-3" name="Message " placeholder="Message" id="Message"></textarea>
-
-        <button class="h-[44px] w-[170px] mt-10 bg-[#34a853] text-white mx-55 mt-4 rounded-lg"   > Send Message</button>
-
-    </div> 
-   </div>
-   </section>
-
-    </main>
-
-    <!--footer Section-->
-
-    <footer>
-        <!--part1-->
-        <div class="h-[380px] bg-[#1b1b1b] text-white mt-[100px] flex justify-between px-16 pt-16 ">
-            <div class="h-[257px] w-[240px]">
-                <span class=" mb-6 text-[26px] font-bold hover:text-[#34a853] ">Growixx</span>
-                <p>sector 4 Kudi Bhagtasni Housing Board Jodhpur, Rajasthan 342005
-                    <br> <br>
-                    Phone: +91 7413940716 <br>
-                    Email: Growixagency@gmail.com 
+    </section>
+    
+    
+        <!-- Portfolio Section -->
+        <section class="portfolio py-16 bg-gray-100" id="portfolio">
+            <!-- Title and Description -->
+            <div class="w-full flex justify-center px-4">
+                <div class="title max-w-3xl text-center">
+                    <h2 class="text-[32px] md:text-[50px] font-bold">PORTFOLIO</h2>
+                    <p class="text-[16px] md:text-[20px] mt-4">
+                        We have a deep understanding of user habits and behaviors. We are committed to using fact-based knowledge and our unique brand of innovation to help you dominate the competition. Every project is customized for optimum visibility and audience response.
                     </p>
+                </div>
             </div>
-
-            <div>
-                <span class=" mb-6 text-[18px] pb-1 border-b-3 border-[#34a853] ">Usefull Links</span>
-                <ul class="text-[#aaaaaa] text-base/8 pt-2 ">
-                    <li><a class="hover:text-[#34a853]" href="#"> > Home</a></li>
-                    <li><a class="hover:text-[#34a853]"  href="#"> > About</a></li>
-                    <li><a class="hover:text-[#34a853]"  href="#"> > services</a></li>
-                    <li><a class="hover:text-[#34a853]"  href="#"> > Portfolio</a></li>
-                    <li><a class="hover:text-[#34a853]"  href="#"> > Contact Us</a></li>
-                </ul>
+        
+            <!-- Slider -->
+            <div class="slider mt-10 overflow-hidden relative">
+                <div class="slide-track flex gap-6 animate-scroll">
+                    <div class="slide min-w-[250px] md:min-w-[300px] flex-shrink-0">
+                        <img class="w-full h-auto rounded-lg shadow-lg object-cover" src="https://growixx.com/assets/img/portfolio/portfolio6.png" alt="Portfolio Image">
+                    </div>
+                    <div class="slide min-w-[250px] md:min-w-[300px] flex-shrink-0">
+                        <img class="w-full h-auto rounded-lg shadow-lg object-cover" src="https://growixx.com/assets/img/portfolio/portfolio7.png" alt="Portfolio Image">
+                    </div>
+                    <div class="slide min-w-[250px] md:min-w-[300px] flex-shrink-0">
+                        <img class="w-full h-auto rounded-lg shadow-lg object-cover" src="https://growixx.com/assets/img/portfolio/portfolio8.png" alt="Portfolio Image">
+                    </div>
+                    <div class="slide min-w-[250px] md:min-w-[300px] flex-shrink-0">
+                        <img class="w-full h-auto rounded-lg shadow-lg object-cover" src="https://growixx.com/assets/img/portfolio/portfolio8.png" alt="Portfolio Image">
+                    </div>
+                    <div class="slide min-w-[250px] md:min-w-[300px] flex-shrink-0">
+                        <img class="w-full h-auto rounded-lg shadow-lg object-cover" src="https://growixx.com/assets/img/portfolio/portfolio8.png" alt="Portfolio Image">
+                    </div>
+                    <div class="slide min-w-[250px] md:min-w-[300px] flex-shrink-2">
+                        <img class="w-full h-auto rounded-lg shadow-lg object-cover" src="https://growixx.com/assets/img/portfolio/portfolio8.png" alt="Portfolio Image">
+                    </div>
+                </div>
             </div>
+        </section>
 
-            <div>
-                <span class=" mb-6  text-[18px] pb-1 border-b-3 border-[#34a853] ">Our Services</span>
-                <ul class="text-[#aaaaaa] text-base/8 pt-2">
-                    <li><a class="hover:text-[#34a853]"  href="#"> > Digital Marketin</a></li>
-                    <li><a class="hover:text-[#34a853]"  href="#"> > Social Media Marketing</a></li>
-                    <li><a class="hover:text-[#34a853]"  href="#"> >  website Design</a></li>
-                    <li><a class="hover:text-[#34a853]"  href="#"> >  Email Marketing</a></li>
-                    <li><a class="hover:text-[#34a853]"  href="#"> > Graphic Design </a></li>
-                    <li><a class="hover:text-[#34a853]"  href="#"> > Performance Marketing </a></li>
-                </ul>
+        
+        <!--Ready To Grow Your Bussniess -->
+        <div class="h-auto w-full bg-black text-white py-10 mb-16">
+            <!-- Title -->
+            <div class="title w-full flex justify-center px-4">
+                <h2 class="text-[24px] md:text-[32px] text-center border-b-4 border-[#34a853] font-bold pb-2">
+                    Ready To Grow Your Business?
+                </h2>
             </div>
-
-            <div>
-                <span class=" mb-6 text-[18px] pb-1  border-b-3 border-[#34a853] ">Get Our News letter</span>
-                <p class="pt-4">Receive monthly updates covering <br> marketing, strategy, design, and all things <br> digital. No spam.</p>
-                <input class="w=[176px] h-[30px]  bg-white " type="text" name="" id="">
-                <button class="w-[113px] h-[30px] mt-5  bg-[#34a853]"> Suscribe</button>
+            <!-- Subtitle -->
+            <div class="w-full flex justify-center px-4">
+                <p class="text-[16px] md:text-[20px] text-center pt-5">
+                    Let's Make Your Success Story Next!
+                </p>
             </div>
-
+            <!-- Button -->
+            <div class="flex justify-center pt-10">
+                <button class="border-2 border-white w-[250px] md:w-[300px] h-[50px] md:h-[55px] rounded-lg hover:bg-[#34a853] transition-colors duration-300">
+                    Schedule a Free Consultation
+                </button>
+            </div>
         </div>
 
-        <!--part2-->
-        <div class="h-[100px] bg-black text-white flex justify-between px-12 items-center ">
-            <div>
-                © Copyright Growix. All Rights Reserved <br>
-                 &nbsp; &nbsp; Developed by Smilin
+        <!-- concact information-->
+         <!-- Contact Section -->
+<section class="contact py-16" id="contact">
+    <!-- Part 1: Heading and Intro -->
+    <div class="w-full text-center mb-16 px-4">
+        <h2 class="text-[28px] md:text-[40px] font-bold border-b-4 inline-block border-[#34a853]">
+            We Are Ready! Are You?
+        </h2>
+        <p class="text-[16px] md:text-[20px] mt-6">
+            Unlock growth and elevate your brand with expert digital marketing, impactful content creation, 
+            engaging social media management, and stunning, conversion-focused web design—backed by a commitment to your success. <br>
+            Feel free to contact us over the phone, email, or contact form below to leverage all of the above for your business.
+        </p>
+    </div>
+
+    <!-- Part 2: Contact Info and Form -->
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 px-4">
+        <!-- Contact Info Boxes -->
+        <div>
+            <!-- Address Box -->
+            <div class="bg-[#e5e4e2] rounded-3xl shadow-2xl p-6 mb-6 text-center">
+                <i class="fa-solid fa-location-dot text-[30px] text-[#34a853]"></i>
+                <h2 class="text-[20px] text-[#777777] font-bold mt-2">Our Address</h2>
+                <p class="text-[#777777]">Sector 4 Kudi Bhagtasni Housing Board Jodhpur Raj.</p>
             </div>
 
-            <div class="">
-                <i class="fa-brands fa-facebook text-[20px] shadow-2xl rounded-lg bg-[#2b2b2b] h-[36px] w-[36px] pt-2 mx-2 pl-2 hover:bg-[#34a853]"></i>
-                <i class="fa-brands fa-instagram text-[20px] shadow-2xl rounded-lg bg-[#2b2b2b] h-[36px] w-[36px] pt-2 mx-2 pl-2 hover:bg-[#34a853]"></i>
-                <i class="fa-brands fa-whatsapp text-[20px] shadow-2xl rounded-lg bg-[#2b2b2b] h-[36px] w-[36px] pt-2 mx-2 pl-2 hover:bg-[#34a853]"></i>
-                <i class="fa-brands fa-linkedin text-[20px] shadow-2xl rounded-lg bg-[#2b2b2b] h-[36px] w-[36px] pt-2 mx-1 pl-2 hover:bg-[#34a853]"></i>
-            </div>
+            <!-- Email and Phone Boxes -->
+            <div class="flex flex-col sm:flex-row justify-center gap-6">
+                <div class="bg-[#e5e4e2] rounded-xl shadow-2xl p-6 text-center w-full">
+                    <i class="fa-solid fa-envelope text-[30px] text-[#34a853]"></i>
+                    <h2 class="text-[#777777] font-bold mt-2">Email Us</h2>
+                    <p class="text-[#777777]">Growixxagency@gmail.com</p>
+                </div>
 
+                <div class="bg-[#e5e4e2] rounded-xl shadow-2xl p-6 text-center w-full">
+                    <i class="fa-solid fa-phone text-[30px] text-[#34a853]"></i>
+                    <h2 class="text-[#777777] font-bold mt-2">Call Us</h2>
+                    <p class="text-[#777777]">+91-7413940716 <br> +91-9784247815 <br> +91-9782351129</p>
+                </div>
+            </div>
         </div>
 
-    </footer>
+        <!-- Contact Form -->
+        <div class="bg-[#e5e4e2] shadow-2xl rounded-3xl p-6">
+            <form class="space-y-6">
+                <!-- Name and Email -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <input class="h-[42px] w-full rounded-xl border-gray-300 focus:border-[#34a853] focus:ring-[#34a853] bg-white px-4" type="text" placeholder="Your Name">
+                    <input class="h-[42px] w-full bg-white rounded-xl border-gray-300 focus:border-[#34a853] focus:ring-[#34a853] px-4" type="email" placeholder="Your Email">
+                </div>
 
+                <!-- Number and Service Selection -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <input class="h-[42px] bg-white w-full rounded-xl border-gray-300 focus:border-[#34a853] focus:ring-[#34a853] px-4" type="text" placeholder="Your Number">
+                    <select class="h-[42px] w-full bg-white rounded-xl border-gray-300 focus:border-[#34a853] focus:ring-[#34a853] px-4" name="Select Service">
+                        <option value="">Select Service</option>
+                        <option value="Video Production">Video Production</option>
+                        <option value="Graphic Designing">Graphic Designing</option>
+                        <option value="Content Creation">Content Creation</option>
+                        <option value="Performance Marketing">Performance Marketing</option>
+                        <option value="Email Marketing">Email Marketing</option>
+                        <option value="Website Design">Website Design</option>
+                        <option value="Social Media Marketing">Social Media Marketing</option>
+                        <option value="Digital Marketing">Digital Marketing</option>
+                    </select>
+                </div>
+
+                <!-- Message -->
+                <textarea class="w-full h-[130px] bg-white rounded-3xl border-gray-300 focus:border-[#34a853] focus:ring-[#34a853] px-4 py-2" placeholder="Message"></textarea>
+
+                <!-- Submit Button -->
+                <button class="h-[44px] w-full md:w-[170px] bg-[#34a853] text-white rounded-lg hover:bg-[#2e8b47] transition-colors md:mx-40 duration-300">
+                    Send Message
+                </button>
+            </form>
+        </div>
+    </div>
+</section>
+
+  </main>
+
+  <!-- Footer Section -->
+<footer>
+    <!-- Part 1: Main Footer -->
+    <div class="bg-[#1b1b1b] text-white mt-[100px] px-6 md:px-16 py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+        <!-- Company Info -->
+        <div>
+            <h2 class="text-[26px] font-bold hover:text-[#34a853] mb-4">Growixx</h2>
+            <p class="text-[#aaaaaa]">
+                Sector 4 Kudi Bhagtasni Housing Board Jodhpur, Rajasthan 342005
+                <br><br>
+                Phone: +91 7413940716 <br>
+                Email: Growixagency@gmail.com
+            </p>
+        </div>
+
+        <!-- Useful Links -->
+        <div>
+            <h3 class="text-[18px] font-bold pb-1 border-b-4 border-[#34a853] mb-4">Useful Links</h3>
+            <ul class="text-[#aaaaaa] space-y-2">
+                <li><a class="hover:text-[#34a853]" href="#">Home</a></li>
+                <li><a class="hover:text-[#34a853]" href="#">About</a></li>
+                <li><a class="hover:text-[#34a853]" href="#">Services</a></li>
+                <li><a class="hover:text-[#34a853]" href="#">Portfolio</a></li>
+                <li><a class="hover:text-[#34a853]" href="#">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <!-- Our Services -->
+        <div>
+            <h3 class="text-[18px] font-bold pb-1 border-b-4 border-[#34a853] mb-4">Our Services</h3>
+            <ul class="text-[#aaaaaa] space-y-2">
+                <li><a class="hover:text-[#34a853]" href="#">Digital Marketing</a></li>
+                <li><a class="hover:text-[#34a853]" href="#">Social Media Marketing</a></li>
+                <li><a class="hover:text-[#34a853]" href="#">Website Design</a></li>
+                <li><a class="hover:text-[#34a853]" href="#">Email Marketing</a></li>
+                <li><a class="hover:text-[#34a853]" href="#">Graphic Design</a></li>
+                <li><a class="hover:text-[#34a853]" href="#">Performance Marketing</a></li>
+            </ul>
+        </div>
+
+        <!-- Newsletter -->
+        <div>
+            <h3 class="text-[18px] font-bold pb-1 border-b-4 border-[#34a853] mb-4">Get Our Newsletter</h3>
+            <p class="text-[#aaaaaa] mb-4">
+                Receive monthly updates covering marketing, strategy, design, and all things digital. No spam.
+            </p>
+            <form class="flex flex-col space-y-3">
+                <input class="rounded-md px-4 py-2 text-black" type="text" placeholder="Your Email">
+                <button class="bg-[#34a853] text-white py-2 rounded-md hover:bg-[#2e8b47] transition-colors duration-300">
+                    Subscribe
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Part 2: Bottom Footer -->
+    <div class="bg-black text-white py-4 px-6 md:px-12 flex flex-col md:flex-row justify-between items-center">
+        <!-- Copyright Text -->
+        <div class="text-center md:text-left text-sm">
+            © Copyright Growixx. All Rights Reserved <br>
+            Developed by Smilin
+        </div>
+
+        <!-- Social Media Icons -->
+        <div class="flex space-x-3 mt-4 md:mt-0">
+            <a href="#" class="text-[20px] shadow-lg rounded-full bg-[#2b2b2b] h-[36px] w-[36px] flex items-center justify-center hover:bg-[#34a853] transition-colors duration-300">
+                <i class="fa-brands fa-facebook"></i>
+            </a>
+            <a href="#" class="text-[20px] shadow-lg rounded-full bg-[#2b2b2b] h-[36px] w-[36px] flex items-center justify-center hover:bg-[#34a853] transition-colors duration-300">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="#" class="text-[20px] shadow-lg rounded-full bg-[#2b2b2b] h-[36px] w-[36px] flex items-center justify-center hover:bg-[#34a853] transition-colors duration-300">
+                <i class="fa-brands fa-whatsapp"></i>
+            </a>
+            <a href="#" class="text-[20px] shadow-lg rounded-full bg-[#2b2b2b] h-[36px] w-[36px] flex items-center justify-center hover:bg-[#34a853] transition-colors duration-300">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+        </div>
+    </div>
+</footer>
+
+
+
+
+  <!-- JavaScript for Toggle Menu -->
+  
+  
 </body>
 <script src="index.js"></script>
 </html>

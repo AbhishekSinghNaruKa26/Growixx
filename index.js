@@ -1,7 +1,10 @@
-const navLinks = document.querySelector('.nav-links')
-function onToggleMenu(e){
-    e.name = e.name == 'menu' ? 'close': 'menu'
-    navLinks.classList.toggle('top-[9%]')
+function onToggleMenu() {
+  const navLinks = document.getElementById('navLinks');
+  if (navLinks.style.top === '65px') {
+    navLinks.style.top = '-100%';
+  } else {
+    navLinks.style.top = '65px';
+  }
 }
 const scroll=ScrollReveal(
     {

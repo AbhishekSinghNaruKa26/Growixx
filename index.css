@@ -48,7 +48,7 @@
 .slider::after{
     background: linear-gradient(to right,rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
     content: '';
-    height: 30%;
+    height: 60%;
     position: absolute;
     width: 17%;
     z-index:2
@@ -56,12 +56,12 @@
  
 .slider::before{
     left:0;
-    top: ;
+    top: 2;
 }
 
 .slider::after{
     right: 0;
-    top: ;
+    top: 2;
     transform: rotateZ('180deg');
 }
 
@@ -76,4 +76,27 @@
 
 /* Responsive Navbar */
 
+
+.abhsa{
+    font-size: 2em;
+    letter-spacing: 10px;
+    font-family: monospace;
+    border-right: 5px solid;
+    width: 30%;
+    white-space: nowrap;
+    overflow: hidden    ;
+    animation: typing 2s , cursor .4s step-end infinite alternate;
+
+}
+
+@keyframes cursor{
+    50%{
+        border-color: transparent;
+    }
+}
+@keyframes typing{
+    from{
+        width:0;
+    }
+}
 
