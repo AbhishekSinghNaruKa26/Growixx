@@ -48,7 +48,7 @@
 .slider::after{
     background: linear-gradient(to right,rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
     content: '';
-    height: 60%;
+    height: 90%;
     position: absolute;
     width: 17%;
     z-index:2
@@ -78,14 +78,15 @@
 
 
 .abhsa{
-    font-size: 2em;
-    letter-spacing: 10px;
+    display: inline;
+    font-size: 1.5em;
+    letter-spacing: 1px;
     font-family: monospace;
     border-right: 5px solid;
-    width: 30%;
+    width: 80%;
     white-space: nowrap;
     overflow: hidden    ;
-    animation: typing 2s , cursor .4s step-end infinite alternate;
+    animation: typing 4s infinite,  step-end infinite;;
 
 }
 
